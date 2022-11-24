@@ -6,7 +6,7 @@ CREATE TABLE skill_levels
 CREATE TABLE lesson_price_plan
 (
   id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  type_of_lesson varchar(12) NOT NULL UNIQUE,
+  type_of_lesson varchar(12) NOT NULL,
   price VARCHAR(50),
   skill_level_id INT NOT NULL,
   CONSTRAINT level_fk
@@ -33,7 +33,7 @@ CREATE TABLE contact_person
   student_id INT NOT NULL PRIMARY KEY,
   name varchar(50) NOT NULL,
   phone_number varchar(20) NOT NULL UNIQUE,
-  email varchar(50) NOT NULL UNIQUE,
+  e_mail varchar(50) NOT NULL UNIQUE,
   CONSTRAINT student_fk
     FOREIGN KEY(student_id)
       REFERENCES student(id)
@@ -161,11 +161,6 @@ CREATE TABLE group_lesson
     student_id INT NOT NULL,
     lesson_price_plan_id INT NOT NULL,
     skill_level_id INT NOT NULL,
-    instructor_id INT NOT NULL,
-    CONSTRAINT student_fk
-        FOREIGN KEY(student_id)
-            REFERENCES student(id)
-            ON DELETE SET NULL,
     CONSTRAINT price_plan_fk
         FOREIGN KEY(lesson_price_plan_id)
             REFERENCES lesson_price_plan(id)

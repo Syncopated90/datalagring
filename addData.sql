@@ -43,7 +43,6 @@ insert into contact_person (name, phone_number, e_mail, student_id) values ('Iol
 insert into contact_person (name, phone_number, e_mail, student_id) values ('Merv Adamsen', '298 755 4552', 'madamseng@google.pl', 18);
 insert into contact_person (name, phone_number, e_mail, student_id) values ('Hinda Seeney', '901 281 4074', 'hseeneyh@multiply.com', 19);
 insert into contact_person (name, phone_number, e_mail, student_id) values ('Marney Kilkenny', '639 484 1397', 'mkilkennyi@comsenz.com', 20);
-insert into contact_person (name, phone_number, e_mail, student_id) values ('Bette Mossop', '127 173 3170', 'bmossopj@gizmodo.com', 2);
 
 insert into instructor (name, phone_number, e_mail, person_number, address) values ('Nicko Mathison', '835 641 5360', 'nmathison0@pbs.org', '224-09-8077', '12108 Kim Circle');
 insert into instructor (name, phone_number, e_mail, person_number, address) values ('Paxon Holywell', '473 475 1124', 'pholywell1@simplemachines.org', '818-19-3023', '5209 Sheridan Court');
@@ -67,7 +66,7 @@ insert into instructor (name, phone_number, e_mail, person_number, address) valu
 insert into instructor (name, phone_number, e_mail, person_number, address) values ('Joellyn Sinclaire', '885 224 1747', 'jsinclairej@stanford.edu', '527-20-5093', '44736 Melody Circle');
 
 insert into instruments (instrument_type, student_id, instructor_id) values ('oboe', 2, 1);
-insert into instruments (instrument_type, student_id, instructor_id) values ('oboe', 3, null);
+insert into instruments (instrument_type, student_id, instructor_id) values ('oboe', 3, 1);
 insert into instruments (instrument_type, student_id, instructor_id) values ('flute', 4, 2);
 insert into instruments (instrument_type, student_id, instructor_id) values ('flute', 5, 3);
 insert into instruments (instrument_type, student_id, instructor_id) values ('drums', 6, 4);
@@ -85,8 +84,8 @@ insert into instruments (instrument_type, student_id, instructor_id) values ('gu
 insert into instruments (instrument_type, student_id, instructor_id) values ('guitar', 18, 16);
 insert into instruments (instrument_type, student_id, instructor_id) values ('guitar', 19, 17);
 insert into instruments (instrument_type, student_id, instructor_id) values ('guitar', 20, 18);
-insert into instruments (instrument_type, student_id, instructor_id) values ('guitar', 21, 19);
-insert into instruments (instrument_type, student_id, instructor_id) values ('guitar', 21, 20);
+insert into instruments (instrument_type, student_id, instructor_id) values ('guitar', 1, 19);
+insert into instruments (instrument_type, student_id, instructor_id) values ('guitar', 2, 20);
 
 insert into instruments_for_rent (type, brand, instrument_id) values ('drums', 'roland', '4825555712');
 insert into instruments_for_rent (type, brand, instrument_id) values ('flute', 'fender', '3574982545');
@@ -98,3 +97,49 @@ insert into instruments_for_rent (type, brand, instrument_id) values ('drums', '
 insert into instruments_for_rent (type, brand, instrument_id) values ('guitar', 'moog', '3625688650');
 insert into instruments_for_rent (type, brand, instrument_id) values ('drums', 'yamaha', '1813317973');
 insert into instruments_for_rent (type, brand, instrument_id) values ('flute', 'fender', '4709849670');
+
+insert into instrument_price_list(instruments_For_rent_id, price) values(1, 100);
+insert into instrument_price_list(instruments_For_rent_id, price) values(2, 200);
+insert into instrument_price_list(instruments_For_rent_id, price) values(3, 300);
+insert into instrument_price_list(instruments_For_rent_id, price) values(4, 500);
+insert into instrument_price_list(instruments_For_rent_id, price) values(5, 600);
+insert into instrument_price_list(instruments_For_rent_id, price) values(6, 700);
+insert into instrument_price_list(instruments_For_rent_id, price) values(7, 800);
+insert into instrument_price_list(instruments_For_rent_id, price) values(8, 900);
+insert into instrument_price_list(instruments_For_rent_id, price) values(9, 1000);
+insert into instrument_price_list(instruments_For_rent_id, price) values(10, 1000);
+
+insert into lesson_price_plan(type_of_lesson, price, skill_level_id) values ('individual', '200', 1);
+insert into lesson_price_plan(type_of_lesson, price, skill_level_id) values ('ensemble', '200', 1);
+insert into lesson_price_plan(type_of_lesson, price, skill_level_id) values ('group', '200', 1);
+insert into lesson_price_plan(type_of_lesson, price, skill_level_id) values ('individual', '700', 3);
+insert into lesson_price_plan(type_of_lesson, price, skill_level_id) values ('individual', '500', 2);
+insert into lesson_price_plan(type_of_lesson, price, skill_level_id) values ('group', '400', 3);
+insert into lesson_price_plan(type_of_lesson, price, skill_level_id) values ('group', '300', 2);
+
+insert into student_siblings(student1_id, student2_id) values (1,2);
+insert into student_siblings(student1_id, student2_id) values (2,1);
+insert into student_siblings(student1_id, student2_id) values (3,4);
+insert into student_siblings(student1_id, student2_id) values (4,3);
+
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 6, 'jazz', '2022-02-18 14:07:17', '2022-02-18 17:07:17', 2, 19);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 7, 'folk', '2022-02-14 03:59:46', '2022-02-14 06:59:46', 2, 16);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 7, 'grindcore', '2022-02-04 00:27:27', '2022-02-04 03:27:27', 2, 3);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 6, 'power electronics', '2022-02-10 14:06:48', '2022-02-10 17:06:48', 2, 17);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 10, 'turntablism', '2022-02-17 21:55:10', '2022-02-18 00:55:10', 2, 17);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 12, 'folk', '2022-02-19 17:28:51', '2022-02-19 20:28:51', 2, 19);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 8, 'pop', '2022-02-09 06:47:44', '2022-02-09 09:47:44', 2, 9);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 8, 'grindcore', '2022-02-21 08:12:12', '2022-02-21 11:12:12', 2, 13);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 8, 'power electronics', '2022-02-02 21:00:54', '2022-02-03 00:00:54', 2, 20);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 10, 'power electronics', '2022-02-02 00:24:19', '2022-02-02 03:24:19', 2, 16);
+
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (12, 'guitar', '2022-02-17 13:52:38', '2022-02-17 15:52:38', 18, 5, 2);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (6, 'guitar', '2022-02-05 21:59:54', '2022-02-05 23:59:54', 13, 4, 1);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (17, 'synthesizer', '2022-02-23 00:36:01', '2022-02-23 02:36:01', 16, 4, 3);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (9, 'guitar', '2022-02-09 14:33:08', '2022-02-09 16:33:08', 20, 4, 2);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (8, 'oboe', '2022-02-15 18:08:54', '2022-02-15 20:08:54', 9, 4, 3);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (14, 'guitar', '2022-02-02 14:26:39', '2022-02-02 16:26:39', 14, 1, 1);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (4, 'flute', '2022-02-27 05:41:31', '2022-02-27 07:41:31', 2, 4, 1);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (2, 'flute', '2022-02-27 12:57:53', '2022-02-27 14:57:53', 14, 1, 2);
+
+  
