@@ -22,7 +22,6 @@ CREATE TABLE student
   address varchar(50),
   phone_number varchar(20) NOT NULL UNIQUE,
   e_mail varchar(50) NOT NULL UNIQUE,
-  contact_person INT NOT NULL,
   skill_level_id INT NOT NULL ,
   CONSTRAINT level_fk
     FOREIGN KEY(skill_level_id)
