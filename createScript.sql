@@ -2,8 +2,7 @@ CREATE TABLE "student"
 (
   "person_id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "person_number" varchar(12) UNIQUE,
-  "first_name" varchar(50),
-  "last_name" varchar(50),
+  "name" varchar(500),
   "street" varchar(100),
   "zip" varchar(5),
   "city" varchar(50)
