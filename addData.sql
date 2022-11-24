@@ -142,4 +142,47 @@ insert into individual_lesson (instructor_id, instrument, start_time, end_time, 
 insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (4, 'flute', '2022-02-27 05:41:31', '2022-02-27 07:41:31', 2, 4, 1);
 insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (2, 'flute', '2022-02-27 12:57:53', '2022-02-27 14:57:53', 14, 1, 2);
 
-  
+insert into rented_instrument(student_id, instruments_for_rent_id, start_Date_of_rental) values (6,1,'2022-02-01 12:00:00');
+insert into rented_instrument(student_id, instruments_for_rent_id, start_Date_of_rental) values (2,4,'2022-02-01 12:00:00');
+insert into rented_instrument(student_id, instruments_for_rent_id, start_Date_of_rental) values (10,3,'2022-02-01 12:00:00');
+
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (2, 5, '2022-02-23 15:04:46', '2022-02-23 17:04:46', 3, 14, 7);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (4, 7, '2022-02-03 15:21:12', '2022-02-03 17:21:12', 3, 17, 7);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-02-25 13:41:25', '2022-02-25 15:41:25', 3, 11, 3);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-02-05 06:32:21', '2022-02-05 08:32:21', 3, 14, 6);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-02-14 22:19:13', '2022-02-15 00:19:13', 3, 18, 3);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (4, 7, '2022-02-03 22:58:15', '2022-02-04 00:58:15', 3, 7, 7);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (4, 7, '2022-02-21 07:27:29', '2022-02-21 09:27:29', 2, 11, 7);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-02-25 00:51:15', '2022-02-25 02:51:15', 2, 7, 3);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (2, 5, '2022-02-16 08:14:46', '2022-02-16 10:14:46', 2, 12, 6);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (4, 7, '2022-02-26 11:09:07', '2022-02-26 13:09:07', 3, 17, 3);
+
+insert into ensemble_participants (student_id, ensemble_id) values (16, 7);
+insert into ensemble_participants (student_id, ensemble_id) values (10, 1);
+insert into ensemble_participants (student_id, ensemble_id) values (19, 8);
+insert into ensemble_participants (student_id, ensemble_id) values (6, 8);
+insert into ensemble_participants (student_id, ensemble_id) values (18, 8);
+insert into ensemble_participants (student_id, ensemble_id) values (2, 9);
+insert into ensemble_participants (student_id, ensemble_id) values (1, 5);
+insert into ensemble_participants (student_id, ensemble_id) values (9, 6);
+insert into ensemble_participants (student_id, ensemble_id) values (14, 4);
+insert into ensemble_participants (student_id, ensemble_id) values (14, 6);
+insert into ensemble_participants (student_id, ensemble_id) values (18, 7);
+insert into ensemble_participants (student_id, ensemble_id) values (18, 2);
+insert into ensemble_participants (student_id, ensemble_id) values (14, 3);
+insert into ensemble_participants (student_id, ensemble_id) values (16, 6);
+insert into ensemble_participants (student_id, ensemble_id) values (6, 6);
+
+insert into group_participants (student_id, group_lesson_id) values (15, 2);
+insert into group_participants (student_id, group_lesson_id) values (9, 8);
+insert into group_participants (student_id, group_lesson_id) values (2, 1);
+insert into group_participants (student_id, group_lesson_id) values (4, 3);
+insert into group_participants (student_id, group_lesson_id) values (17, 1);
+insert into group_participants (student_id, group_lesson_id) values (10, 9);
+insert into group_participants (student_id, group_lesson_id) values (6, 3);
+insert into group_participants (student_id, group_lesson_id) values (13, 8);
+insert into group_participants (student_id, group_lesson_id) values (19, 6);
+insert into group_participants (student_id, group_lesson_id) values (14, 10);
+insert into group_participants (student_id, group_lesson_id) values (13, 4);
+insert into group_participants (student_id, group_lesson_id) values (17, 9);
+insert into group_participants (student_id, group_lesson_id) values (14, 4);

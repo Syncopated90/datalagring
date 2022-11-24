@@ -82,6 +82,7 @@ CREATE TABLE rented_instrument
 (
   instruments_for_rent_id INT NOT NULL,
   student_id INT NOT NULL,
+  start_Date_of_rental TIMESTAMP NOT NULL,
   PRIMARY KEY (instruments_for_rent_id, student_id),
   CONSTRAINT instrument_fk
     FOREIGN KEY(instruments_for_rent_id)
@@ -115,8 +116,9 @@ CREATE TABLE ensemble
 
 CREATE TABLE ensemble_participants
 (
-    ensemble_id INT NOT NULL PRIMARY KEY,
+    ensemble_id INT NOT NULL,
     student_id INT NOT NULL,
+    PRIMARY KEY(ensemble_id, student_id),
     CONSTRAINT student_fk
         FOREIGN KEY(student_id)
             REFERENCES student(id)
@@ -158,7 +160,7 @@ CREATE TABLE group_lesson
     maximum_participants INT NOT NULL,
     start_time TIMESTAMP NOT NULL,
     end_time TIMESTAMP NOT NULL,
-    student_id INT NOT NULL,
+    instructor_id INT NOT NULL,
     lesson_price_plan_id INT NOT NULL,
     skill_level_id INT NOT NULL,
     CONSTRAINT price_plan_fk
@@ -177,8 +179,9 @@ CREATE TABLE group_lesson
 
 CREATE TABLE group_participants
 (
-    group_lesson_id INT NOT NULL PRIMARY KEY,
+    group_lesson_id INT NOT NULL,
     student_id INT NOT NULL,
+    PRIMARY KEY(group_lesson_id, student_id),
     CONSTRAINT group_lesson_fk
         FOREIGN KEY(group_lesson_id)
             REFERENCES group_lesson(id)
