@@ -62,34 +62,6 @@ CREATE TABLE instructor
   phone_number varchar(20) NOT NULL UNIQUE,
   email varchar(50) NOT NULL UNIQUE
 );
-CREATE TABLE group_lesson
-(
-  id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  student_id INT,
-  instructor_id INT,
-  lesson_price_plan_id INT NOT NULL,
-  minimum_participants INT NOT NULL,
-  maximum_participants INT NOT NULL,
-  skill_level_id INT NOT NULL,
-  start_time TIMESTAMP NOT NULL,
-  end_time TIMESTAMP NOT NULL,
-  CONSTRAINT level_fk
-    FOREIGN KEY(skill_level_id)
-      REFERENCES skill_levels(id)
-      ON DELETE RESTRICT,
-  CONSTRAINT price_plan_fk
-    FOREIGN KEY(lesson_price_plan_id)
-      REFERENCES lesson_price_plan(id)
-      ON DELETE RESTRICT,
-  CONSTRAINT student_fk
-    FOREIGN KEY(student_id)
-      REFERENCES student(id)
-      ON DELETE RESTRICT,
-  CONSTRAINT instructor_fk
-    FOREIGN KEY(instructor_id)
-      REFERENCES instructor(id)
-      ON DELETE RESTRICT
-);
 CREATE TABLE instruments_for_rent
 (
   id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -134,7 +106,7 @@ CREATE TABLE ensemble
     CONSTRAINT instructor_fk
         FOREIGN KEY(instructor_id)
             REFERENCES instructor(id)
-            ON DELETE SET NULL
+            ON DELETE SET NULL,
     CONSTRAINT price_plan_fk
         FOREIGN KEY(lesson_price_plan_id)
             REFERENCES lesson_price_plan(id)
@@ -164,16 +136,16 @@ CREATE TABLE individual_lesson
     instructor_id INT NOT NULL,
     CONSTRAINT student_fk
         FOREIGN KEY(student_id)
-            REFERENCES strudent(id)
-            ON DELETE CASCADE
+            REFERENCES student(id)
+            ON DELETE CASCADE,
     CONSTRAINT price_plan_fk
         FOREIGN KEY(lesson_price_plan_id)
             REFERENCES lesson_price_plan(id)
-            ON DELETE RESTRICT
+            ON DELETE RESTRICT,
     CONSTRAINT skill_fk
         FOREIGN KEY(skill_level_id)
-            REFERENCES skill_level(id)
-            ON DELETE RESTRICT
+            REFERENCES skill_levels(id)
+            ON DELETE RESTRICT,
     CONSTRAINT instructor_fk
         FOREIGN KEY(instructor_id)
             REFERENCES instructor(id)
@@ -194,15 +166,15 @@ CREATE TABLE group_lesson
     CONSTRAINT student_fk
         FOREIGN KEY(student_id)
             REFERENCES student(id)
-            ON DELETE SET NULL
+            ON DELETE SET NULL,
     CONSTRAINT price_plan_fk
         FOREIGN KEY(lesson_price_plan_id)
             REFERENCES lesson_price_plan(id)
-            ON DELETE RESTRICT
+            ON DELETE RESTRICT,
     CONSTRAINT skill_fk
         FOREIGN KEY(skill_level_id)
-            REFERENCES skill_level(id)
-            ON DELETE RESTRICT
+            REFERENCES skill_levels(id)
+            ON DELETE RESTRICT,
     CONSTRAINT instructor_fk
         FOREIGN KEY(instructor_id)
             REFERENCES instructor(id)
@@ -215,8 +187,8 @@ CREATE TABLE group_participants
     student_id INT NOT NULL,
     CONSTRAINT group_lesson_fk
         FOREIGN KEY(group_lesson_id)
-            REFERENCES group_lesson(id),
-            ON DELETE CASCADE
+            REFERENCES group_lesson(id)
+            ON DELETE CASCADE,
     CONSTRAINT student_fk
         FOREIGN KEY(student_id)
             REFERENCES student(id)
@@ -232,7 +204,7 @@ CREATE TABLE instruments
     CONSTRAINT student_fk
         FOREIGN KEY(student_id)
             REFERENCES student(id)
-            ON DELETE CASCADE
+            ON DELETE CASCADE,
     CONSTRAINT instructor_fk
         FOREIGN KEY(instructor_id)
             REFERENCES instructor(id)
