@@ -117,10 +117,26 @@ insert into lesson_price_plan(type_of_lesson, price, skill_level_id) values ('in
 insert into lesson_price_plan(type_of_lesson, price, skill_level_id) values ('group', '400', 3);
 insert into lesson_price_plan(type_of_lesson, price, skill_level_id) values ('group', '300', 2);
 
-insert into student_siblings(student1_id, student2_id) values (1,2);
-insert into student_siblings(student1_id, student2_id) values (2,1);
-insert into student_siblings(student1_id, student2_id) values (3,4);
-insert into student_siblings(student1_id, student2_id) values (4,3);
+insert into student_siblings (student1_id, student2_id) values (6, 1);
+insert into student_siblings (student1_id, student2_id) values (1, 8);
+insert into student_siblings (student1_id, student2_id) values (6, 8);
+
+insert into student_siblings (student1_id, student2_id) values (3, 10);
+insert into student_siblings (student1_id, student2_id) values (3, 2);
+insert into student_siblings (student1_id, student2_id) values (10, 2);
+
+insert into student_siblings (student1_id, student2_id) values (15, 7);
+insert into student_siblings (student1_id, student2_id) values (5, 15);
+insert into student_siblings (student1_id, student2_id) values (5, 7);
+
+insert into student_siblings (student1_id, student2_id) values (4, 12);
+insert into student_siblings (student1_id, student2_id) values (11, 4);
+insert into student_siblings (student1_id, student2_id) values (12, 11);
+
+
+insert into student_siblings (student1_id, student2_id) values (19, 20);
+
+insert into student_siblings (student1_id, student2_id) values (13, 9);
 
 insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 6, 'jazz', '2022-02-18 14:07:17', '2022-02-18 17:07:17', 2, 19);
 insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 7, 'folk', '2022-02-14 03:59:46', '2022-02-14 06:59:46', 2, 16);
@@ -132,6 +148,36 @@ insert into ensemble (minimum_participants, maximum_participants, genre, start_t
 insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 8, 'grindcore', '2022-02-21 08:12:12', '2022-02-21 11:12:12', 2, 13);
 insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 8, 'power electronics', '2022-02-02 21:00:54', '2022-02-03 00:00:54', 2, 20);
 insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 10, 'power electronics', '2022-02-02 00:24:19', '2022-02-02 03:24:19', 2, 16);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 6, 'jazz', '2022-08-20 18:23:31', '2022-08-20 21:23:31', 2, 13);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 10, 'pop', '2022-09-20 11:33:12', '2022-09-20 14:33:12', 2, 5);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 6, 'grindcore', '2022-12-10 09:12:39', '2022-12-10 12:12:39', 2, 16);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 8, 'grindcore', '2022-09-21 12:12:31', '2022-09-21 15:12:31', 2, 11);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 7, 'folk', '2022-02-10 20:27:19', '2022-02-10 23:27:19', 2, 1);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 8, 'power electronics', '2022-12-08 03:39:44', '2022-12-08 06:39:44', 2, 8);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 7, 'turntablism', '2022-10-10 00:15:50', '2022-10-10 03:15:50', 2, 16);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 10, 'jazz', '2022-10-13 20:18:17', '2022-10-13 23:18:17', 2, 18);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 6, 'power electronics', '2022-10-16 19:31:09', '2022-10-16 22:31:09', 2, 6);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 12, 'power electronics', '2022-02-10 01:52:40', '2022-02-10 04:52:40', 2, 13);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 7, 'pop', '2022-11-23 21:03:34', '2022-11-24 00:03:34', 2, 3);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 10, 'pop', '2022-05-05 23:33:55', '2022-05-06 02:33:55', 2, 4);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 6, 'turntablism', '2022-09-24 06:27:59', '2022-09-24 09:27:59', 2, 18);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 10, 'jazz', '2022-11-22 20:06:33', '2022-11-22 23:06:33', 2, 16);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 7, 'grindcore', '2022-04-11 02:29:54', '2022-04-11 05:29:54', 2, 17);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 8, 'pop', '2022-08-22 23:27:59', '2022-08-23 02:27:59', 2, 12);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 12, 'folk', '2022-02-27 03:47:22', '2022-02-27 06:47:22', 2, 14);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 6, 'folk', '2022-01-13 07:19:56', '2022-01-13 10:19:56', 2, 4);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 10, 'grindcore', '2022-06-10 17:17:54', '2022-06-10 20:17:54', 2, 1);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 6, 'power electronics', '2022-11-28 12:22:18', '2022-11-28 15:22:18', 2, 16);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 7, 'jazz', '2022-07-18 04:28:49', '2022-07-18 07:28:49', 2, 1);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 12, 'folk', '2022-01-07 18:13:12', '2022-01-07 21:13:12', 2, 6);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 10, 'jazz', '2022-02-17 14:54:07', '2022-02-17 17:54:07', 2, 20);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 10, 'pop', '2022-11-13 02:59:04', '2022-11-13 05:59:04', 2, 3);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 8, 'pop', '2022-09-23 04:54:43', '2022-09-23 07:54:43', 2, 11);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 10, 'pop', '2022-10-10 00:00:13', '2022-10-10 03:00:13', 2, 12);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 6, 'pop', '2022-12-16 03:54:10', '2022-12-16 06:54:10', 2, 17);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 7, 'folk', '2022-04-25 22:08:29', '2022-04-26 01:08:29', 2, 3);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 10, 'power electronics', '2022-11-29 11:00:30', '2022-11-29 14:00:30', 2, 5);
+insert into ensemble (minimum_participants, maximum_participants, genre, start_time, end_time, lesson_price_plan_id, instructor_id) values (5, 6, 'pop', '2022-02-07 19:23:34', '2022-02-07 22:23:34', 2, 19);
 
 insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (12, 'guitar', '2022-02-17 13:52:38', '2022-02-17 15:52:38', 18, 5, 2);
 insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (6, 'guitar', '2022-02-05 21:59:54', '2022-02-05 23:59:54', 13, 4, 1);
@@ -141,6 +187,36 @@ insert into individual_lesson (instructor_id, instrument, start_time, end_time, 
 insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (14, 'guitar', '2022-02-02 14:26:39', '2022-02-02 16:26:39', 14, 1, 1);
 insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (4, 'flute', '2022-02-27 05:41:31', '2022-02-27 07:41:31', 2, 4, 1);
 insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (2, 'flute', '2022-02-27 12:57:53', '2022-02-27 14:57:53', 14, 1, 2);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (1, 'drums', '2022-04-05 18:49:16', '2022-04-05 20:49:16', 2, 5, 2);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (18, 'guitar', '2022-06-30 05:35:08', '2022-06-30 07:35:08', 11, 1, 1);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (17, 'oboe', '2022-09-06 00:55:14', '2022-09-06 02:55:14', 4, 5, 3);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (14, 'guitar', '2022-04-04 03:34:08', '2022-04-04 05:34:08', 18, 5, 2);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (4, 'guitar', '2022-01-21 15:41:44', '2022-01-21 17:41:44', 3, 4, 2);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (9, 'guitar', '2022-10-05 17:56:34', '2022-10-05 19:56:34', 1, 1, 2);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (7, 'flute', '2022-04-02 02:51:23', '2022-04-02 04:51:23', 13, 4, 3);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (1, 'synthesizer', '2022-07-23 18:55:26', '2022-07-23 20:55:26', 6, 4, 3);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (6, 'synthesizer', '2022-06-27 03:33:41', '2022-06-27 05:33:41', 3, 1, 3);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (19, 'synthesizer', '2022-11-17 06:11:06', '2022-11-17 08:11:06', 16, 4, 3);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (18, 'drums', '2022-07-09 02:23:50', '2022-07-09 04:23:50', 18, 4, 2);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (10, 'guitar', '2022-01-04 00:55:52', '2022-01-04 02:55:52', 5, 1, 3);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (16, 'synthesizer', '2022-08-22 04:51:44', '2022-08-22 06:51:44', 15, 5, 1);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (3, 'flute', '2022-09-24 08:57:05', '2022-09-24 10:57:05', 13, 4, 1);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (11, 'synthesizer', '2022-02-18 19:40:47', '2022-02-18 21:40:47', 7, 4, 1);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (20, 'drums', '2022-04-18 22:35:55', '2022-04-19 00:35:55', 9, 4, 3);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (3, 'oboe', '2022-09-11 08:01:56', '2022-09-11 10:01:56', 8, 5, 1);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (14, 'synthesizer', '2022-12-28 19:15:36', '2022-12-28 21:15:36', 14, 5, 2);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (6, 'guitar', '2022-05-18 11:21:43', '2022-05-18 13:21:43', 16, 5, 3);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (20, 'flute', '2022-02-24 01:47:52', '2022-02-24 03:47:52', 15, 1, 2);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (1, 'synthesizer', '2022-04-19 21:35:31', '2022-04-19 23:35:31', 16, 4, 2);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (6, 'flute', '2022-01-13 03:10:19', '2022-01-13 05:10:19', 7, 4, 3);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (1, 'flute', '2022-12-04 06:05:47', '2022-12-04 08:05:47', 3, 5, 2);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (16, 'drums', '2022-12-23 16:27:37', '2022-12-23 18:27:37', 4, 5, 1);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (13, 'guitar', '2022-01-07 20:51:49', '2022-01-07 22:51:49', 7, 1, 2);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (18, 'guitar', '2022-12-03 06:49:26', '2022-12-03 08:49:26', 10, 5, 1);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (5, 'flute', '2022-03-25 13:06:29', '2022-03-25 15:06:29', 8, 1, 1);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (2, 'oboe', '2022-05-10 10:30:34', '2022-05-10 12:30:34', 13, 4, 1);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (14, 'drums', '2022-06-15 12:56:30', '2022-06-15 14:56:30', 3, 4, 1);
+insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (18, 'flute', '2022-06-26 23:08:09', '2022-06-27 01:08:09', 12, 1, 3);
 
 insert into rented_instrument(student_id, instruments_for_rent_id, start_Date_of_rental) values (6,1,'2022-02-01 12:00:00');
 insert into rented_instrument(student_id, instruments_for_rent_id, start_Date_of_rental) values (2,4,'2022-02-01 12:00:00');
@@ -156,6 +232,36 @@ insert into group_lesson (minimum_participants, maximum_participants, start_time
 insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-02-25 00:51:15', '2022-02-25 02:51:15', 2, 7, 3);
 insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (2, 5, '2022-02-16 08:14:46', '2022-02-16 10:14:46', 2, 12, 6);
 insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (4, 7, '2022-02-26 11:09:07', '2022-02-26 13:09:07', 3, 17, 3);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (4, 7, '2022-03-08 19:18:58', '2022-03-08 21:18:58', 1, 5, 7);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-07-18 01:03:06', '2022-07-18 03:03:06', 1, 15, 3);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (4, 7, '2022-01-12 00:28:23', '2022-01-12 02:28:23', 3, 20, 7);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (2, 5, '2022-07-23 08:25:11', '2022-07-23 10:25:11', 1, 6, 7);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (2, 5, '2022-10-13 00:56:09', '2022-10-13 02:56:09', 1, 1, 7);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-12-20 15:47:03', '2022-12-20 17:47:03', 1, 14, 6);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (2, 5, '2022-03-25 17:04:35', '2022-03-25 19:04:35', 1, 3, 6);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (4, 7, '2022-12-21 23:17:18', '2022-12-22 01:17:18', 3, 18, 6);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-09-29 08:46:22', '2022-09-29 10:46:22', 1, 12, 3);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (2, 5, '2022-03-20 01:40:47', '2022-03-20 03:40:47', 3, 9, 6);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (2, 5, '2022-09-08 15:40:16', '2022-09-08 17:40:16', 2, 6, 6);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-09-12 23:49:52', '2022-09-13 01:49:52', 3, 16, 6);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-10-27 02:29:06', '2022-10-27 04:29:06', 2, 2, 3);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-05-30 01:59:11', '2022-05-30 03:59:11', 1, 10, 3);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (4, 7, '2022-04-13 01:51:35', '2022-04-13 03:51:35', 1, 16, 3);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-01-05 15:18:53', '2022-01-05 17:18:53', 1, 11, 6);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (4, 7, '2022-09-19 21:19:47', '2022-09-19 23:19:47', 3, 14, 7);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-03-01 04:47:51', '2022-03-01 06:47:51', 3, 4, 3);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-05-07 21:08:50', '2022-05-07 23:08:50', 2, 4, 3);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-01-23 23:33:58', '2022-01-24 01:33:58', 1, 18, 6);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (4, 7, '2022-10-28 21:30:16', '2022-10-28 23:30:16', 3, 2, 7);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-04-17 20:38:24', '2022-04-17 22:38:24', 2, 16, 3);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-07-28 18:46:58', '2022-07-28 20:46:58', 3, 4, 6);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (4, 7, '2022-01-19 16:33:08', '2022-01-19 18:33:08', 1, 9, 6);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (2, 5, '2022-09-02 15:13:02', '2022-09-02 17:13:02', 2, 11, 3);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (2, 5, '2022-09-17 18:22:34', '2022-09-17 20:22:34', 3, 18, 3);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (5, 8, '2022-08-19 17:02:31', '2022-08-19 19:02:31', 1, 1, 7);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (2, 5, '2022-11-30 13:05:43', '2022-11-30 15:05:43', 2, 8, 6);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (4, 7, '2022-10-17 00:15:06', '2022-10-17 02:15:06', 3, 17, 7);
+insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (2, 5, '2022-11-26 04:38:41', '2022-11-26 06:38:41', 3, 18, 6);
 
 insert into ensemble_participants (student_id, ensemble_id) values (16, 7);
 insert into ensemble_participants (student_id, ensemble_id) values (10, 1);
