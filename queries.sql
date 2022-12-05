@@ -47,14 +47,13 @@ UNION ALL(SELECT instructor_id FROM individual_lesson WHERE start_time BETWEEN '
 UNION ALL(SELECT instructor_id FROM ensemble WHERE start_time BETWEEN '2022-12-01' AND '2022-12-31')) AS instructors
 GROUP BY instructor_id HAVING COUNT (*) > 1 ORDER BY COUNT(instructor_id) DESC;
 
---count number of shifts for one instructor over the whole year
+--count number of shifts for one instructor over the whole year with union
 SELECT COUNT (instructor_id) FROM ((SELECT instructor_id FROM group_lesson)
 UNION ALL(SELECT instructor_id FROM individual_lesson)
 UNION ALL(SELECT instructor_id FROM ensemble)) AS instructors
 WHERE instructor_id = 16;
 
 --lists number of ensemble participants
-EXPLAIN ANALYZE
 SELECT COUNT(student_id) AS participants, genre, start_time, CASE
   WHEN COUNT(student_id) = maximum_participants THEN 'fully booked'
   WHEN COUNT(student_id) = (maximum_participants - 1) THEN 'one free spot'
