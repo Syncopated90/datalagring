@@ -44,14 +44,16 @@ SELECT student2_id FROM student_siblings UNION ALL
 SELECT student1_id FROM student_siblings) as x) as x
 GROUP BY student2_id HAVING COUNT (*) = 2;
 
-SELECT COUNT(student2_id) FROM two_sibling;
+SELECT COUNT(student2_id) FROM two_siblings;
 --counts students without siblings
-SELECT COUNT (*) AS students_without_siblings FROM student WHERE student.id NOT IN ((SELECT student1_id FROM student_siblings) UNION (SELECT student2_id FROM student_siblings));
+SELECT COUNT (*) AS students_without_siblings FROM student WHERE student.id NOT IN
+((SELECT student1_id FROM student_siblings) UNION (SELECT student2_id FROM student_siblings));
 -- shows the students without siblings:
 SELECT * FROM student WHERE student.id NOT IN ((SELECT student1_id FROM student_siblings) UNION (SELECT student2_id FROM student_siblings));
 
 --Task3 assignemnt 3: select all instructors who have worked more than a certain number of shifts, in this case 6
-SELECT instructor_id FROM ((SELECT instructor_id FROM group_lesson WHERE start_time BETWEEN '2022-12-01' AND '2022-12-31' )
+SELECT instructor_id, COUNT(instructor_id) FROM
+((SELECT instructor_id FROM group_lesson WHERE start_time BETWEEN '2022-12-01' AND '2022-12-31' )
 UNION ALL(SELECT instructor_id FROM individual_lesson WHERE start_time BETWEEN '2022-12-01' AND '2022-12-31' )
 UNION ALL(SELECT instructor_id FROM ensemble WHERE start_time BETWEEN '2022-12-01' AND '2022-12-31')) AS instructors
 GROUP BY instructor_id HAVING COUNT (*) > 1 ORDER BY COUNT(instructor_id) DESC;
