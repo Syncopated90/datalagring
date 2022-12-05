@@ -51,7 +51,7 @@ SELECT COUNT (*) AS students_without_siblings FROM student WHERE student.id NOT 
 -- shows the students without siblings:
 SELECT * FROM student WHERE student.id NOT IN ((SELECT student1_id FROM student_siblings) UNION (SELECT student2_id FROM student_siblings));
 
---Task3 assignemnt 3: select all instructors who have worked more than a certain number of shifts, in this case 6
+--Task3 assignemnt 3: select all instructors who have worked more than a certain number of shifts, in this case 1
 SELECT instructor_id, COUNT(instructor_id) FROM
 ((SELECT instructor_id FROM group_lesson WHERE start_time BETWEEN '2022-12-01' AND '2022-12-31' )
 UNION ALL(SELECT instructor_id FROM individual_lesson WHERE start_time BETWEEN '2022-12-01' AND '2022-12-31' )
