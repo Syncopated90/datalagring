@@ -22,17 +22,17 @@ CREATE VIEW one_sibling AS
 SELECT student2_id, COUNT (*) FROM(
 SELECT * FROM(
 SELECT student2_id FROM student_siblings UNION ALL
-SELECT student1_id FROM student_siblings) as one_sibling) as one_sibling
+SELECT student1_id FROM student_siblings) as x) as x
 GROUP BY student2_id HAVING COUNT (*) = 1;
 
-SELECT SUM(count) FROM one_sibling;
+SELECT COUNT(student2_id) FROM one_sibling;
 
 --counting two sibling students
-CREATE VIEW two_sibling AS
+CREATE VIEW two_siblings AS
 SELECT student2_id, COUNT (*) FROM(
 SELECT * FROM(
 SELECT student2_id FROM student_siblings UNION ALL
-SELECT student1_id FROM student_siblings) as one_sibling) as one_sibling
+SELECT student1_id FROM student_siblings) as x) as x
 GROUP BY student2_id HAVING COUNT (*) = 2;
 
 SELECT COUNT(student2_id) FROM two_sibling;
@@ -40,3 +40,9 @@ SELECT COUNT(student2_id) FROM two_sibling;
 SELECT COUNT (*) AS students_without_siblings FROM student WHERE student.id NOT IN ((SELECT student1_id FROM student_siblings) UNION (SELECT student2_id FROM student_siblings));
 -- shows the students without siblings:
 SELECT * FROM student WHERE student.id NOT IN ((SELECT student1_id FROM student_siblings) UNION (SELECT student2_id FROM student_siblings));
+
+--select all instructors who have worked more than a certain number of shifts, in this case 6
+SELECT instructor_id FROM ((SELECT instructor_id FROM group_lesson)
+UNION ALL(SELECT instructor_id FROM individual_lesson)
+UNION ALL(SELECT instructor_id FROM ensemble)) AS instructors
+GROUP BY instructor_id HAVING COUNT (*) > 6;
