@@ -14,7 +14,16 @@ SELECT
 (SELECT COUNT (start_time) FROM group_lesson WHERE start_time BETWEEN '2022-02-01' AND '2022-02-28') as group_lesson,
 (SELECT COUNT (start_time) FROM individual_lesson WHERE start_time BETWEEN '2022-02-01' AND '2022-02-28') as individual_lesson;
 
-SELECT SUM(ensemble + group_lesson + individual_lesson) FROM lessons_february;
+SELECT SUM(ensemble + group_lesson + individual_lesson), individual_lesson, group_lesson, ensemble
+FROM lessons_february GROUP BY individual_lesson, group_lesson, ensemble;
+
+--do the above without a VIEW
+SELECT SUM(ensemble + group_lesson + individual_lesson), individual_lesson, group_lesson, ensemble FROM
+(SELECT
+(SELECT COUNT (start_time) FROM ensemble WHERE start_time BETWEEN '2022-02-01' AND '2022-02-28') as ensemble,
+(SELECT COUNT (start_time) FROM group_lesson WHERE start_time BETWEEN '2022-02-01' AND '2022-02-28') as group_lesson,
+(SELECT COUNT (start_time) FROM individual_lesson WHERE start_time BETWEEN '2022-02-01' AND '2022-02-28') as individual_lesson) AS foo
+GROUP BY individual_lesson, group_lesson, ensemble;
 
 --TASK 3 assignment 2:counting one sibling students, again have to create the view before you can count the number of rows
 
