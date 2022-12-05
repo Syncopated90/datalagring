@@ -1,4 +1,4 @@
---finding number of lessons in a month
+--Task 3 assignment 1: finding number of lessons in a month
 SELECT
 (SELECT COUNT (start_time) FROM ensemble WHERE start_time BETWEEN '2022-02-01' AND '2022-02-28') as ensemble,
 (SELECT COUNT (start_time) FROM group_lesson WHERE start_time BETWEEN '2022-02-01' AND '2022-02-28') as group_lesson,
@@ -16,7 +16,7 @@ SELECT
 
 SELECT SUM(ensemble + group_lesson + individual_lesson) FROM lessons_february;
 
---counting one sibling students, again have to create the view before you can count the number of rows
+--TASK 3 assignment 2:counting one sibling students, again have to create the view before you can count the number of rows
 
 CREATE VIEW one_sibling AS
 SELECT student2_id, COUNT (*) FROM(
@@ -41,7 +41,7 @@ SELECT COUNT (*) AS students_without_siblings FROM student WHERE student.id NOT 
 -- shows the students without siblings:
 SELECT * FROM student WHERE student.id NOT IN ((SELECT student1_id FROM student_siblings) UNION (SELECT student2_id FROM student_siblings));
 
---select all instructors who have worked more than a certain number of shifts, in this case 6, query 3 in assignment
+--Task3 assignemnt 3: select all instructors who have worked more than a certain number of shifts, in this case 6
 SELECT instructor_id FROM ((SELECT instructor_id FROM group_lesson WHERE start_time BETWEEN '2022-12-01' AND '2022-12-31' )
 UNION ALL(SELECT instructor_id FROM individual_lesson WHERE start_time BETWEEN '2022-12-01' AND '2022-12-31' )
 UNION ALL(SELECT instructor_id FROM ensemble WHERE start_time BETWEEN '2022-12-01' AND '2022-12-31')) AS instructors
@@ -53,7 +53,7 @@ UNION ALL(SELECT instructor_id FROM individual_lesson)
 UNION ALL(SELECT instructor_id FROM ensemble)) AS instructors
 WHERE instructor_id = 16;
 
---lists number of ensemble participants
+--Task 3 assingment 4:lists number of ensemble participants from now until one week ahead
 SELECT COUNT(student_id) AS participants, genre, start_time, CASE
   WHEN COUNT(student_id) = maximum_participants THEN 'fully booked'
   WHEN COUNT(student_id) = (maximum_participants - 1) THEN 'one free spot'
@@ -65,9 +65,6 @@ INNER JOIN ensemble_participants
 ON ensemble.id = ensemble_participants.ensemble_id
 WHERE ensemble.start_time BETWEEN current_date AND current_date + interval '1 week') as events
 GROUP BY genre, start_time, maximum_participants ORDER BY genre, start_time;
-
---updating minimum_participants in ensemble
-UPDATE ensemble SET minimum_participants=2;
 
 --finding current date and current month
 SELECT current_Date, (current_date + interval '1 week');
