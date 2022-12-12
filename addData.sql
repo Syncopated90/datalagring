@@ -222,9 +222,9 @@ insert into individual_lesson (instructor_id, instrument, start_time, end_time, 
 insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (14, 'drums', '2022-06-15 12:56:30', '2022-06-15 14:56:30', 3, 4, 1);
 insert into individual_lesson (instructor_id, instrument, start_time, end_time, student_id, lesson_price_plan_id, skill_level_id) values (18, 'flute', '2022-06-26 23:08:09', '2022-06-27 01:08:09', 12, 1, 3);
 
-insert into rented_instrument(student_id, instruments_for_rent_id, start_Date_of_rental) values (6,1,'2022-02-01 12:00:00');
-insert into rented_instrument(student_id, instruments_for_rent_id, start_Date_of_rental) values (2,4,'2022-02-01 12:00:00');
-insert into rented_instrument(student_id, instruments_for_rent_id, start_Date_of_rental) values (10,3,'2022-02-01 12:00:00');
+insert into rented_instrument(student_id, instruments_for_rent_id, start_date) values (6,1,'2022-02-01 12:00:00');
+insert into rented_instrument(student_id, instruments_for_rent_id, start_date) values (2,4,'2022-02-01 12:00:00');
+insert into rented_instrument(student_id, instruments_for_rent_id, start_date) values (10,3,'2022-02-01 12:00:00');
 
 insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (2, 5, '2022-02-23 15:04:46', '2022-02-23 17:04:46', 3, 14, 7);
 insert into group_lesson (minimum_participants, maximum_participants, start_time, end_time, skill_level_id, instructor_id, lesson_price_plan_id) values (4, 7, '2022-02-03 15:21:12', '2022-02-03 17:21:12', 3, 17, 7);

@@ -83,3 +83,10 @@ SELECT date_trunc('month', current_date), date_trunc('month', (current_date + in
 
 --finding ensembles within a certain date
 SELECT * FROM ensemble WHERE start_time BETWEEN current_date AND current_date + interval '1 week' ORDER BY genre, start_time ASC;
+
+--finding available instruments_for_rent type, brand and price
+SELECT brand, price FROM instruments_for_rent
+INNER JOIN instrument_price_list ON instruments_for_rent.id = instrument_price_list.instruments_for_rent_id
+WHERE instruments_for_rent.id NOT IN
+(SELECT instruments_for_rent_id FROM rented_instrument)
+AND instruments_for_rent.type = 'drums';

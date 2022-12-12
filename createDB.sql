@@ -66,8 +66,7 @@ CREATE TABLE instruments_for_rent
   id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   instrument_id VARCHAR(20) UNIQUE NOT NULL,
   type VARCHAR(50) NOT NULL,
-  brand VARCHAR(50) NOT NULL,
-  currently_in_stock INT
+  brand VARCHAR(50) NOT NULL
 );
 CREATE TABLE instrument_price_list
 (
@@ -80,10 +79,11 @@ CREATE TABLE instrument_price_list
 );
 CREATE TABLE rented_instrument
 (
+  id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   instruments_for_rent_id INT NOT NULL,
   student_id INT NOT NULL,
-  start_Date_of_rental TIMESTAMP NOT NULL,
-  PRIMARY KEY (instruments_for_rent_id, student_id),
+  start_date TIMESTAMP NOT NULL,
+  end_date TIMESTAMP,
   CONSTRAINT instrument_fk
     FOREIGN KEY(instruments_for_rent_id)
       REFERENCES instruments_for_rent(id)
