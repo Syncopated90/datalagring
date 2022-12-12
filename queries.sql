@@ -84,9 +84,20 @@ SELECT date_trunc('month', current_date), date_trunc('month', (current_date + in
 --finding ensembles within a certain date
 SELECT * FROM ensemble WHERE start_time BETWEEN current_date AND current_date + interval '1 week' ORDER BY genre, start_time ASC;
 
---finding available instruments_for_rent type, brand and price
+--BEGIN and COMMIT to start and end transactions
+--finding brand and price for available instruments_for_rent for a certain type of instrument
 SELECT brand, price FROM instruments_for_rent
 INNER JOIN instrument_price_list ON instruments_for_rent.id = instrument_price_list.instruments_for_rent_id
 WHERE instruments_for_rent.id NOT IN
-(SELECT instruments_for_rent_id FROM rented_instrument)
+(SELECT instruments_for_rent_id FROM rented_instrument WHERE end_date IS NULL)
 AND instruments_for_rent.type = 'drums';
+--find all instruments available for rent
+SELECT instruments_for_rent_id, instrument_id, type, brand, price FROM instruments_for_rent
+INNER JOIN instrument_price_list ON instruments_for_rent.id = instrument_price_list.instruments_for_rent_id
+WHERE instruments_for_rent.id NOT IN
+(SELECT instruments_for_rent_id FROM rented_instrument WHERE end_date IS NULL) FOR UPDATE;
+--create rental of instrument
+INSERT INTO rented_instrument (instruments_for_rent_id, student_id, start_date, end_date ) VALUES (
+(SELECT id FROM instruments_for_rent WHERE instrument_id = '4825555712'), 6, current_date, null);
+--end rental
+UPDATE rented_instrument SET end_date = '2022-04-01 12:00:00' WHERE instruments_for_rent_id = 1;
