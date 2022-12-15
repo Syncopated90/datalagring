@@ -78,6 +78,7 @@ public class DAO {
             stmt.setString(1, instrumentID);
             stmt.executeUpdate();
             this.conn.commit();
+            System.out.println("rental ended of instrument "+ instrumentID);
         }catch(SQLException err){
             err.printStackTrace();
             try{
