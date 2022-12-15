@@ -1,7 +1,6 @@
 package se.kth.iv1351.soundgood.main;
-import java.sql.SQLException;
-
-import se.kth.iv1351.soundgood.dao.DAO;
+import se.kth.iv1351.soundgood.controller.Controller;
+import se.kth.iv1351.soundgood.view.View;
 /**
  *
  * @author fredr
@@ -9,10 +8,6 @@ import se.kth.iv1351.soundgood.dao.DAO;
 public class Main{
     
     public static void main(String[] args) {
-        try{
-            DAO dao = new DAO();
-        }catch (SQLException ex){
-            ex.printStackTrace();
-        }
+        new View(new Controller()).runRental();
     }
 }

@@ -97,6 +97,7 @@ insert into instruments_for_rent (type, brand, instrument_id) values ('drums', '
 insert into instruments_for_rent (type, brand, instrument_id) values ('guitar', 'moog', '3625688650');
 insert into instruments_for_rent (type, brand, instrument_id) values ('drums', 'yamaha', '1813317973');
 insert into instruments_for_rent (type, brand, instrument_id) values ('flute', 'fender', '4709849670');
+insert into instruments_for_rent (type, brand, instrument_id) values ('synthesizer', 'Nord', '1234567899');
 
 insert into instrument_price_list(instruments_For_rent_id, price) values(1, 100);
 insert into instrument_price_list(instruments_For_rent_id, price) values(2, 200);
@@ -108,7 +109,8 @@ insert into instrument_price_list(instruments_For_rent_id, price) values(7, 800)
 insert into instrument_price_list(instruments_For_rent_id, price) values(8, 900);
 insert into instrument_price_list(instruments_For_rent_id, price) values(9, 1000);
 insert into instrument_price_list(instruments_For_rent_id, price) values(10, 1000);
-
+insert into instrument_price_list(instruments_For_rent_id, price) values(11, 2000);
+  
 insert into lesson_price_plan(type_of_lesson, price, skill_level_id) values ('individual', '200', 1);
 insert into lesson_price_plan(type_of_lesson, price, skill_level_id) values ('ensemble', '200', 1);
 insert into lesson_price_plan(type_of_lesson, price, skill_level_id) values ('group', '200', 1);
